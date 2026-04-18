@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>목회 AI 연구소 하남 세미나</title>
+  <meta name="description" content="4월 20일 하남 믿음교회에서 진행되는 목회 AI 연구소 세미나. 노트북LM 목회적 활용, 제미나이 캔버스를 통한 앱 만들기, 구글 비즈를 통한 쇼츠 제작하기." />
+
+  <link rel="icon" href="https://i.imgur.com/SDrGofA.jpeg" />
+  <link rel="apple-touch-icon" href="https://i.imgur.com/SDrGofA.jpeg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="목회 AI 연구소 하남 세미나" />
+  <meta property="og:description" content="4월 20일 하남 믿음교회 · 백형진 소장 · 노트북LM, 제미나이 캔버스, 구글 비즈 실전 세미나" />
+  <meta property="og:image" content="https://i.imgur.com/SDrGofA.jpeg" />
+  <meta property="og:site_name" content="목회 AI 연구소" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="목회 AI 연구소 하남 세미나" />
+  <meta name="twitter:description" content="4월 20일 하남 믿음교회 · 백형진 소장 · 노트북LM, 제미나이 캔버스, 구글 비즈 실전 세미나" />
+  <meta name="twitter:image" content="https://i.imgur.com/SDrGofA.jpeg" />
+
+  <style>
+    :root{
+      --bg:#08111f;
+      --bg2:#10213e;
+      --text:#f8fafc;
+      --muted:#cbd5e1;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",Arial,sans-serif;background:linear-gradient(180deg,#08111f 0%, #0b1730 48%, #10213e 100%);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,.12), transparent 24%),
+        radial-gradient(circle at bottom, rgba(96,165,250,.14), transparent 32%);
+      pointer-events:none;
+    }
+    .wrap{width:min(100%,1180px);margin:0 auto;padding:16px}
+    .grid{display:grid;gap:18px;align-items:start}
+    .hero-card,.info-card,.action-card,.tagline,.related-card{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card{overflow:hidden;position:relative}
+    .hero-image-btn{
+      display:block;width:100%;padding:0;border:0;background:#020617;cursor:zoom-in;
+    }
+    .hero-image{
+      width:100%;height:auto;max-height:70svh;display:block;object-fit:contain;background:#020617;
+    }
+    .hero-overlay{
+      position:absolute;left:0;right:0;bottom:0;padding:20px;
+      background:linear-gradient(180deg, transparent 0%, rgba(2,6,23,.18) 25%, rgba(2,6,23,.88) 100%);
+    }
+    .related-card{overflow:hidden}
+    .related-card img{
+      width:100%;height:auto;display:block;object-fit:contain;background:#020617;
+    }
+    .related-card .caption{
+      padding:12px 14px;color:#cbd5e1;font-size:14px;font-weight:600;
+    }
+    .eyebrow{
+      display:inline-flex;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;
+      letter-spacing:.04em;color:#dbeafe;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    }
+    .title{margin:14px 0 0;font-size:34px;line-height:1.05;letter-spacing:-.03em;font-weight:900}
+    .title .accent{display:block;color:#93c5fd}
+    .hero-sub{margin:10px 0 0;color:var(--muted);font-size:15px;line-height:1.55}
+    .stack{display:grid;gap:12px}
+    .info-card{padding:16px}
+    .label{font-size:12px;color:#bfdbfe;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .date-box{background:linear-gradient(180deg, rgba(245,158,11,.16), rgba(245,158,11,.08));border-color:rgba(245,158,11,.28)}
+    .date-main{margin-top:4px;font-weight:900;font-size:32px;line-height:1.08;letter-spacing:-.03em}
+    .date-sub{margin-top:8px;font-size:14px;color:#fde68a;font-weight:700}
+    .speaker,.topic{font-size:30px;line-height:1.12;margin-top:4px;font-weight:900;letter-spacing:-.03em}
+    .topic-list{margin-top:8px;display:grid;gap:8px}
+    .topic-list p{margin:0;font-size:18px;line-height:1.45;font-weight:800}
+    .mini-grid{display:grid;gap:12px}
+    .mini-title{font-size:12px;color:#cbd5e1;font-weight:800;letter-spacing:.05em}
+    .mini-value{margin-top:4px;font-size:26px;font-weight:900;color:#dbeafe}
+    .mini-copy{margin-top:4px;font-size:17px;line-height:1.45;font-weight:700}
+    .action-card{padding:16px}
+    .section-title{font-size:18px;font-weight:900;color:#dbeafe;margin:0 0 12px}
+    .buttons{display:grid;gap:10px;grid-template-columns:1fr}
+    .btn{display:block;padding:16px 16px 15px;border-radius:18px;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+    .btn span{display:block;margin-top:5px;font-size:12px;opacity:.92;font-weight:600}
+    .btn-blue{background:#2563eb;color:white}
+    .btn-slate{background:#334155;color:white}
+    .btn-indigo{background:#4f46e5;color:white}
+    .btn-amber{background:#fbbf24;color:#111827}
+    .btn-green{background:#059669;color:white}
+    .tagline{padding:18px 16px;text-align:center;background:linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,.05))}
+    .tagline h2{margin:0;color:#f6d68a;font-size:31px;line-height:1.15;letter-spacing:-.03em}
+    .tagline p{margin:10px 0 0;color:var(--muted);font-size:15px;line-height:1.55}
+    .foot-note{margin-top:10px;text-align:center;color:#94a3b8;font-size:12px}
+    .modal{
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+      background:rgba(0,0,0,.9);padding:24px;z-index:50;
+    }
+    .modal.open{display:flex}
+    .modal img{
+      max-width:100%;max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:20px;box-shadow:var(--shadow);
+    }
+    .close-btn{
+      position:absolute;top:16px;right:16px;border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.1);color:white;padding:10px 14px;border-radius:999px;cursor:pointer;
+      backdrop-filter: blur(6px);font-weight:700;
+    }
+    @media (max-width:430px){
+      .title{font-size:31px}.date-main{font-size:28px}.speaker{font-size:28px}.tagline h2{font-size:27px}
+      .topic-list p{font-size:17px}
+    }
+    @media (min-width:760px){
+      .wrap{padding:22px}.mini-grid{grid-template-columns:1fr 1fr}.buttons{grid-template-columns:1fr 1fr}.hero-image{max-height:74svh}
+    }
+    @media (min-width:1040px){
+      .grid{grid-template-columns:0.98fr 1.02fr;gap:28px;min-height:100svh;align-items:start}
+      .wrap{padding:28px}.hero-overlay{padding:28px}.title{font-size:58px}.hero-sub{font-size:18px}
+      .info-card,.action-card,.tagline{padding:22px}.date-main{font-size:44px}.speaker{font-size:42px}
+      .topic-list p{font-size:24px}
+      .tagline h2{font-size:44px}.tagline p{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="grid">
+      <div>
+        <article class="hero-card">
+          <button class="hero-image-btn" id="openImage" type="button" aria-label="사진 크게 보기">
+            <img class="hero-image" src="https://i.imgur.com/rRX3t91.jpeg" alt="하남 믿음교회 세미나 메인 이미지" />
+          </button>
+          <div class="hero-overlay">
+            <div class="eyebrow">2026년 4월 오프라인 세미나</div>
+            <h1 class="title">목회 AI 연구소<span class="accent">하남 세미나</span></h1>
+            <p class="hero-sub">현장에서 바로 적용할 수 있는 실전형 AI 세미나</p>
+          </div>
+        </article>
+
+        <article class="related-card" style="margin-top:16px;">
+          <img src="https://i.imgur.com/4BZH6gr.jpeg" alt="세미나 관련 이미지" />
+          <div class="caption">관련 이미지</div>
+        </article>
+      </div>
+
+      <section class="stack">
+        <article class="info-card date-box">
+          <div class="label">시간</div>
+          <div class="date-main">4월 20일(월) 오후 2-5시</div>
+          <div class="date-sub">장소: 하남 믿음교회 · 주차: 인근 공용주차장</div>
+        </article>
+
+        <article class="info-card">
+          <div class="label">강사</div>
+          <div class="speaker">백형진 소장</div>
+        </article>
+
+        <article class="info-card">
+          <div class="label">주제</div>
+          <div class="topic-list">
+            <p>노트북LM 목회적 활용</p>
+            <p>제미나이 캔버스를 통한 앱만들기</p>
+            <p>구글 비즈를 통한 쇼츠 제작하기</p>
+          </div>
+        </article>
+
+        <section class="mini-grid">
+          <article class="info-card">
+            <div class="mini-title">장소</div>
+            <div class="mini-value">하남 믿음교회</div>
+          </article>
+          <article class="info-card">
+            <div class="mini-title">주차</div>
+            <div class="mini-copy">인근 공용주차장</div>
+          </article>
+        </section>
+
+        <article class="action-card">
+          <h3 class="section-title">빠른 이동 및 문의</h3>
+          <div class="buttons">
+            <a class="btn btn-indigo" href="https://imgur.com/rRX3t91" target="_blank" rel="noreferrer">오시는 길<span>하남 믿음교회 위치 보기</span></a>
+            <a class="btn btn-blue" href="https://forms.gle/chQbQPQL83c44CkR9" target="_blank" rel="noreferrer">세미나 신청<span>Google Form 신청서</span></a>
+            <a class="btn btn-slate" href="https://forms.gle/xuBpoXtNA3cCwMwn8" target="_blank" rel="noreferrer">파트너 교회 신청<span>목회 AI 연구소 파트너 교회</span></a>
+            <a class="btn btn-amber" href="https://open.kakao.com/o/g8xjXlIg" target="_blank" rel="noreferrer">오픈 카톡<span>목회 AI 연구소 소통방</span></a>
+            <a class="btn btn-green" href="https://open.kakao.com/o/smi51Hqi" target="_blank" rel="noreferrer">개인 문의<span>1:1 오픈카톡 문의</span></a>
+          </div>
+        </article>
+
+        <article class="tagline">
+          <h2>AI로 목회의 혁신을 더하다</h2>
+          <p>목회 현장에 바로 적용할 수 있는 실제적인 AI 활용 세미나</p>
+        </article>
+
+        <div class="foot-note">GitHub Pages 업로드용 단일 index.html 파일</div>
+      </section>
+    </section>
+  </main>
+
+  <div class="modal" id="imageModal" aria-hidden="true">
+    <button class="close-btn" id="closeImage" type="button">닫기</button>
+    <img src="https://i.imgur.com/rRX3t91.jpeg" alt="하남 믿음교회 세미나 메인 이미지 크게 보기" />
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openImage');
+    const closeBtn = document.getElementById('closeImage');
+    const modal = document.getElementById('imageModal');
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
