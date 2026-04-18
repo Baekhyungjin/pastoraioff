@@ -67,7 +67,7 @@
       width:100%;height:auto;display:block;object-fit:contain;background:#020617;
     }
     .related-card .caption{
-      padding:12px 14px;color:#cbd5e1;font-size:14px;font-weight:600;
+      padding:12px 14px;color:#cbd5e1;font-size:14px;font-weight:600;border-top:1px solid rgba(255,255,255,.1);
     }
     .eyebrow{
       display:inline-flex;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;
@@ -82,7 +82,7 @@
     .date-box{background:linear-gradient(180deg, rgba(245,158,11,.16), rgba(245,158,11,.08));border-color:rgba(245,158,11,.28)}
     .date-main{margin-top:4px;font-weight:900;font-size:32px;line-height:1.08;letter-spacing:-.03em}
     .date-sub{margin-top:8px;font-size:14px;color:#fde68a;font-weight:700}
-    .speaker,.topic{font-size:30px;line-height:1.12;margin-top:4px;font-weight:900;letter-spacing:-.03em}
+    .speaker{font-size:30px;line-height:1.12;margin-top:4px;font-weight:900;letter-spacing:-.03em}
     .topic-list{margin-top:8px;display:grid;gap:8px}
     .topic-list p{margin:0;font-size:18px;line-height:1.45;font-weight:800}
     .mini-grid{display:grid;gap:12px}
@@ -148,8 +148,8 @@
         </article>
 
         <article class="related-card" style="margin-top:16px;">
-          <img src="https://i.imgur.com/4BZH6gr.jpeg" alt="세미나 관련 이미지" />
-          <div class="caption">관련 이미지</div>
+          <img id="relatedImage" src="https://i.imgur.com/4BZH6gr.jpg" alt="세미나 관련 이미지" />
+          <div class="caption">관련 이미지가 보이지 않으면 아래 버튼으로 확인해 주세요.</div>
         </article>
       </div>
 
@@ -188,7 +188,7 @@
         <article class="action-card">
           <h3 class="section-title">빠른 이동 및 문의</h3>
           <div class="buttons">
-            <a class="btn btn-indigo" href="https://imgur.com/rRX3t91" target="_blank" rel="noreferrer">오시는 길<span>하남 믿음교회 위치 보기</span></a>
+            <a class="btn btn-indigo" href="https://naver.me/5En3fyIP" target="_blank" rel="noreferrer">오시는 길<span>하남 믿음교회 위치 보기</span></a>
             <a class="btn btn-blue" href="https://forms.gle/chQbQPQL83c44CkR9" target="_blank" rel="noreferrer">세미나 신청<span>Google Form 신청서</span></a>
             <a class="btn btn-slate" href="https://forms.gle/xuBpoXtNA3cCwMwn8" target="_blank" rel="noreferrer">파트너 교회 신청<span>목회 AI 연구소 파트너 교회</span></a>
             <a class="btn btn-amber" href="https://open.kakao.com/o/g8xjXlIg" target="_blank" rel="noreferrer">오픈 카톡<span>목회 AI 연구소 소통방</span></a>
@@ -237,6 +237,21 @@
       if (e.key === 'Escape') {
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    const relatedImage = document.getElementById('relatedImage');
+    const relatedCandidates = [
+      'https://i.imgur.com/4BZH6gr.jpg',
+      'https://i.imgur.com/4BZH6gr.png',
+      'https://i.imgur.com/4BZH6gr.jpeg'
+    ];
+    let relatedIndex = 0;
+
+    relatedImage.addEventListener('error', () => {
+      relatedIndex += 1;
+      if (relatedIndex < relatedCandidates.length) {
+        relatedImage.src = relatedCandidates[relatedIndex];
       }
     });
   </script>
